@@ -3,6 +3,7 @@ import os
 import re
 import secrets
 import warnings
+import traceback
 from io import BytesIO
 from pathlib import Path
 from PIL import Image, ImageOps, UnidentifiedImageError
@@ -11,12 +12,12 @@ from functools import wraps
 import click
 import requests
 import stripe
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request, render_template, session, redirect, url_for, abort
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from flask_wtf.csrf import CSRFProtect, generate_csrf
+from flask_wtf.csrf import CSRFProtect, CSRFError, generate_csrf
 from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
@@ -138,6 +139,33 @@ def create_app(config=None):
     csrf.init_app(app)
     Migrate(app, db)
 
+    @app.errorhandler(CSRFError)
+    def csrf_error(error):
+        if request.path == '/api/checkout':
+            app.logger.warning('Checkout rejected: csrf validation failed')
+            return jsonify(error='Checkout session expired. Please try again.'), 400
+        return error.get_response()
+
+    def checkout_errors(fn):
+        @wraps(fn)
+        def wrapped(*args, **kwargs):
+            try:
+                response = fn(*args, **kwargs)
+                if isinstance(response, tuple) and response[1] >= 400:
+                    app.logger.warning('Checkout rejected: http_status=%s', response[1])
+                return response
+            except SQLAlchemyError as error:
+                db.session.rollback()
+                # Exception messages / SQL parameters can contain buyer data and secrets.
+                state = getattr(getattr(error, 'orig', None), 'sqlstate', None)
+                state = state if isinstance(state, str) and re.fullmatch(r'[A-Z0-9]{5}', state) else 'unknown'
+                frames = '\n'.join(f'{Path(f.filename).name}:{f.lineno} in {f.name}'
+                                   for f in traceback.extract_tb(error.__traceback__))
+                app.logger.error('Checkout database failure: type=%s sqlstate=%s\n%s',
+                                 type(error).__name__, state, frames)
+                return jsonify(error='Checkout temporarily unavailable. Please try again.'), 500
+        return wrapped
+
     @app.after_request
     def headers(response):
         response.headers['X-Content-Type-Options'] = 'nosniff'
@@ -180,6 +208,7 @@ def create_app(config=None):
         return jsonify(csrf_token=generate_csrf(), payment_mode='stripe_test' if key else 'mock')
 
     @app.post('/api/checkout')
+    @checkout_errors
     def checkout():
         data = request.get_json(silent=True)
         if not isinstance(data, dict):
@@ -233,6 +262,9 @@ def create_app(config=None):
             db.session.commit()
         except IntegrityError:
             db.session.rollback()
+            # Only an actual request-key collision is a retry conflict.
+            if db.session.scalar(db.select(Order.id).where(Order.request_key == request_key)) is None:
+                raise
             return jsonify(error='This checkout request is already being processed. Please check your orders before retrying.'), 409
         session['order_tokens'] = (session.get('order_tokens', []) + [order.token])[-10:]
         if key:

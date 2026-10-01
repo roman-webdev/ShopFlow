@@ -344,3 +344,41 @@ def test_order_history_tracks_changes_without_duplicates(app):
         assert [(c.previous_status,c.new_status) for c in order.status_changes] == [('processing','shipped'),('unfulfilled','processing')]
         assert all(c.changed_at for c in order.status_changes)
     assert 'Status history' in client.get(f'/admin/order/{order_id}').text
+
+def test_checkout_expired_csrf_refresh(app):
+    import time
+    client = app.test_client()
+    with patch('itsdangerous.timed.time.time', return_value=time.time() - 7200):
+        expired = token(client)
+    with patch.object(app.logger, 'warning') as logged:
+        result = client.post('/api/checkout', json=checkout_data(), headers={'X-CSRFToken': expired})
+    assert result.status_code == 400
+    assert result.json['error'] == 'Checkout session expired. Please try again.'
+    assert logged.called
+    assert client.post('/api/checkout', json=checkout_data(), headers={'X-CSRFToken': token(client)}).status_code == 201
+
+
+def test_checkout_constraint_failure_is_not_retry_conflict(app, caplog):
+    from sqlalchemy.exc import IntegrityError
+    client = app.test_client()
+    headers = {'X-CSRFToken': token(client)}
+    sensitive = 'buyer@example.invalid SECRET_DATABASE_PASSWORD'
+    with patch.object(db.session, 'commit', side_effect=IntegrityError('INSERT', {'email': sensitive}, Exception(sensitive))):
+        result = client.post('/api/checkout', json=checkout_data(), headers=headers)
+    assert result.status_code == 500
+    assert 'Checkout database failure' in caplog.text
+    assert sensitive not in caplog.text
+    assert 'demo@example.com' not in caplog.text
+    with app.app_context():
+        assert db.session.query(Order).count() == 0
+
+
+def test_checkout_database_read_failure_is_logged_safely(app, caplog):
+    from sqlalchemy.exc import OperationalError
+    client = app.test_client()
+    headers = {'X-CSRFToken': token(client)}
+    with patch.object(db.session, 'scalar', side_effect=OperationalError('SELECT', {}, Exception('secret'))):
+        result = client.post('/api/checkout', json=checkout_data(), headers=headers)
+    assert result.status_code == 500
+    assert 'OperationalError' in caplog.text
+    assert 'secret' not in caplog.text
