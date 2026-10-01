@@ -39,13 +39,33 @@ It was designed as a portfolio project with a strong focus on user experience, r
 
 ### Storefront
 
-![ShopFlow storefront](docs/qa/screenshots/preview-desktop.png)
+<p align="center">
+  <img src="docs/qa/screenshots/storefront-v2.png" alt="ShopFlow storefront" width="100%">
+</p>
+
+### Product Catalog
+
+<p align="center">
+  <img src="docs/qa/screenshots/catalog-v2.png" alt="ShopFlow product catalog" width="100%">
+</p>
+
+### Product Experience
+
+<p align="center">
+  <img src="docs/qa/screenshots/product-v2.png" alt="ShopFlow product details and variants" width="100%">
+</p>
 
 ### Checkout
 
-![ShopFlow checkout](docs/qa/screenshots/checkout-desktop.png)
+<p align="center">
+  <img src="docs/qa/screenshots/checkout-v2.png" alt="ShopFlow checkout" width="100%">
+</p>
 
-> Additional responsive screenshots are available in `docs/qa/screenshots/`.
+### Admin Dashboard
+
+<p align="center">
+  <img src="docs/qa/screenshots/admin-v2.png" alt="ShopFlow admin dashboard" width="100%">
+</p>
 
 ---
 
