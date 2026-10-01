@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Studio headphones",
+    "category": "Sound",
+    "price_cents": 12900,
+    "image": "/static/products/photos/colorways/1-graphite.webp",
+    "description": "Immersive sound, soft cushions and 30 hours of wireless listening.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Graphite",
+      "Sand",
+      "Olive"
+    ],
+    "translations": {
+      "en": {
+        "name": "Studio headphones",
+        "description": "Immersive sound, soft cushions and 30 hours of wireless listening."
+      },
+      "ru": {
+        "name": "Студийные наушники",
+        "description": "Объёмный звук, мягкие амбушюры и 30 часов без проводов."
+      },
+      "uk": {
+        "name": "Студійні навушники",
+        "description": "Об’ємний звук, м’які амбушури та 30 годин без дротів."
+      }
+    },
+    "badge": "Bestseller",
+    "sku": "SF-001",
+    "specifications": {
+      "features": "Immersive sound, soft cushions and 30 hours of wireless listening."
+    }
+  },
+  {
+    "name": "Everyday backpack",
+    "category": "Carry",
+    "price_cents": 8900,
+    "image": "/static/products/photos/colorways/2-ink.webp",
+    "description": "Durable canvas, a padded laptop pocket and room for your everyday.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Ink",
+      "Olive"
+    ],
+    "translations": {
+      "en": {
+        "name": "Everyday backpack",
+        "description": "Durable canvas, a padded laptop pocket and room for your everyday."
+      },
+      "ru": {
+        "name": "Городской рюкзак",
+        "description": "Прочный канвас, мягкий карман для ноутбука и место для всего нужного."
+      },
+      "uk": {
+        "name": "Міський рюкзак",
+        "description": "Міцний канвас, м’яка кишеня для ноутбука та місце для всього потрібного."
+      }
+    },
+    "badge": "Bestseller",
+    "sku": "SF-002",
+    "specifications": {
+      "features": "Durable canvas, a padded laptop pocket and room for your everyday."
+    }
+  },
+  {
+    "name": "Analog watch",
+    "category": "Lifestyle",
+    "price_cents": 11500,
+    "image": "/static/products/photos/3.webp",
+    "description": "A precise dial, steel case and comfortable strap for every day.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Silver",
+      "Black"
+    ],
+    "translations": {
+      "en": {
+        "name": "Analog watch",
+        "description": "A precise dial, steel case and comfortable strap for every day."
+      },
+      "ru": {
+        "name": "Аналоговые часы",
+        "description": "Точный циферблат, стальной корпус и удобный ремешок на каждый день."
+      },
+      "uk": {
+        "name": "Аналоговий годинник",
+        "description": "Точний циферблат, сталевий корпус та зручний ремінець на щодень."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-003",
+    "specifications": {
+      "features": "A precise dial, steel case and comfortable strap for every day."
+    }
+  },
+  {
+    "name": "Ceramic mug",
+    "category": "Home",
+    "price_cents": 2400,
+    "image": "/static/products/photos/colorways/4-chalk.webp",
+    "description": "A tactile 350 ml ceramic mug for slow mornings. Dishwasher safe.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Chalk",
+      "Clay"
+    ],
+    "translations": {
+      "en": {
+        "name": "Ceramic mug",
+        "description": "A tactile 350 ml ceramic mug for slow mornings. Dishwasher safe."
+      },
+      "ru": {
+        "name": "Керамическая чашка",
+        "description": "Керамика, которую приятно держать. 350 мл для неспешного утра. Можно мыть в посудомоечной машине."
+      },
+      "uk": {
+        "name": "Керамічна чашка",
+        "description": "Кераміка, яку приємно тримати. 350 мл для неквапливого ранку. Можна мити в посудомийці."
+      }
+    },
+    "badge": "Bestseller",
+    "sku": "SF-004",
+    "specifications": {
+      "features": "A tactile 350 ml ceramic mug for slow mornings. Dishwasher safe."
+    }
+  },
+  {
+    "name": "Desk lamp",
+    "category": "Home",
+    "price_cents": 7900,
+    "image": "/static/products/photos/colorways/5-cream.webp",
+    "description": "Warm adjustable light with a small footprint for your workspace.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Cream",
+      "Black",
+      "Olive"
+    ],
+    "translations": {
+      "en": {
+        "name": "Desk lamp",
+        "description": "Warm adjustable light with a small footprint for your workspace."
+      },
+      "ru": {
+        "name": "Настольная лампа",
+        "description": "Тёплый регулируемый свет и компактный силуэт для рабочего стола."
+      },
+      "uk": {
+        "name": "Настільна лампа",
+        "description": "Тепле регульоване світло та компактний силует для робочого столу."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-005",
+    "specifications": {
+      "features": "Warm adjustable light with a small footprint for your workspace."
+    }
+  },
+  {
+    "name": "Pocket speaker",
+    "category": "Sound",
+    "price_cents": 5900,
+    "image": "/static/products/photos/colorways/6-blue.webp",
+    "description": "Clear wireless sound in a compact, take-anywhere format.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Blue",
+      "Graphite"
+    ],
+    "translations": {
+      "en": {
+        "name": "Pocket speaker",
+        "description": "Clear wireless sound in a compact, take-anywhere format."
+      },
+      "ru": {
+        "name": "Портативная колонка",
+        "description": "Чистый беспроводной звук в компактном формате для путешествий."
+      },
+      "uk": {
+        "name": "Портативна колонка",
+        "description": "Чистий бездротовий звук у компактному форматі для подорожей."
+      }
+    },
+    "badge": "Sale",
+    "sku": "SF-006",
+    "specifications": {
+      "features": "Clear wireless sound in a compact, take-anywhere format."
+    }
+  },
+  {
+    "name": "Daily sneakers",
+    "category": "Lifestyle",
+    "price_cents": 9500,
+    "image": "/static/products/photos/7.webp",
+    "description": "Breathable materials and a supportive sole for daily movement.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Sand / EU 38",
+      "Sand / EU 39",
+      "Sand / EU 40",
+      "Sand / EU 41",
+      "Sand / EU 42",
+      "Black / EU 38",
+      "Black / EU 39",
+      "Black / EU 40",
+      "Black / EU 41",
+      "Black / EU 42",
+      "Blue / EU 38",
+      "Blue / EU 39",
+      "Blue / EU 40",
+      "Blue / EU 41",
+      "Blue / EU 42"
+    ],
+    "translations": {
+      "en": {
+        "name": "Daily sneakers",
+        "description": "Breathable materials and a supportive sole for daily movement."
+      },
+      "ru": {
+        "name": "Повседневные кроссовки",
+        "description": "Дышащие материалы и удобная подошва для движения каждый день."
+      },
+      "uk": {
+        "name": "Повсякденні кросівки",
+        "description": "Матеріали, що дихають, та зручна підошва для руху щодня."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-007",
+    "specifications": {
+      "features": "Breathable materials and a supportive sole for daily movement.",
+      "dimensions": "EU 38–42"
+    }
+  },
+  {
+    "name": "Travel camera",
+    "category": "Lifestyle",
+    "price_cents": 19900,
+    "image": "/static/products/photos/colorways/8-body.webp",
+    "description": "A compact companion for weekend explorations and lasting memories.",
+    "available": false,
+    "stock": 0,
+    "variants": [
+      "Body",
+      "Kit"
+    ],
+    "translations": {
+      "en": {
+        "name": "Travel camera",
+        "description": "A compact companion for weekend explorations and lasting memories."
+      },
+      "ru": {
+        "name": "Камера для путешествий",
+        "description": "Компактный спутник для прогулок и памятных кадров."
+      },
+      "uk": {
+        "name": "Камера для подорожей",
+        "description": "Компактний супутник для прогулянок і пам’ятних кадрів."
+      }
+    },
+    "badge": "",
+    "sku": "SF-008",
+    "specifications": {
+      "features": "A compact companion for weekend explorations and lasting memories."
+    },
+    "variant_details": {
+      "Body": {
+        "price_cents": 19900,
+        "image": "/static/products/photos/colorways/8-body.webp"
+      },
+      "Kit": {
+        "price_cents": 24900,
+        "image": "/static/products/photos/8.webp"
+      }
+    }
+  },
+  {
+    "name": "Weekender tote",
+    "category": "Carry",
+    "price_cents": 4900,
+    "image": "/static/products/photos/9.webp",
+    "description": "An easy canvas tote with generous space for a short getaway.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Natural",
+      "Ink"
+    ],
+    "translations": {
+      "en": {
+        "name": "Weekender tote",
+        "description": "An easy canvas tote with generous space for a short getaway."
+      },
+      "ru": {
+        "name": "Сумка на выходные",
+        "description": "Лёгкая сумка из канваса с просторным отделением для короткой поездки."
+      },
+      "uk": {
+        "name": "Сумка на вихідні",
+        "description": "Легка сумка з канваса з містким відділенням для короткої поїздки."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-009",
+    "specifications": {
+      "features": "An easy canvas tote with generous space for a short getaway."
+    }
+  },
+  {
+    "name": "Pour-over set",
+    "category": "Home",
+    "price_cents": 4200,
+    "image": "/static/products/photos/colorways/10-chalk.webp",
+    "description": "A ceramic dripper and matching cup for your morning coffee ritual.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Chalk",
+      "Clay"
+    ],
+    "translations": {
+      "en": {
+        "name": "Pour-over set",
+        "description": "A ceramic dripper and matching cup for your morning coffee ritual."
+      },
+      "ru": {
+        "name": "Набор для кофе",
+        "description": "Керамическая воронка и чашка для утреннего кофейного ритуала."
+      },
+      "uk": {
+        "name": "Набір для кави",
+        "description": "Керамічна воронка та чашка для ранкового кавового ритуалу."
+      }
+    },
+    "badge": "Sale",
+    "sku": "SF-010",
+    "specifications": {
+      "features": "A ceramic dripper and matching cup for your morning coffee ritual."
+    }
+  },
+  {
+    "name": "Linen cushion",
+    "category": "Home",
+    "price_cents": 3200,
+    "image": "/static/products/photos/colorways/11-sand.webp",
+    "description": "Soft linen with a removable cover, made for a calmer home.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Sand",
+      "Olive"
+    ],
+    "translations": {
+      "en": {
+        "name": "Linen cushion",
+        "description": "Soft linen with a removable cover, made for a calmer home."
+      },
+      "ru": {
+        "name": "Льняная подушка",
+        "description": "Мягкий лён со съёмным чехлом для уютного дома."
+      },
+      "uk": {
+        "name": "Лляна подушка",
+        "description": "М’який льон зі знімним чохлом для затишного дому."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-011",
+    "specifications": {
+      "features": "Soft linen with a removable cover, made for a calmer home."
+    }
+  },
+  {
+    "name": "Focus notebook",
+    "category": "Lifestyle",
+    "price_cents": 1800,
+    "image": "/static/products/photos/12.webp",
+    "description": "Lay-flat pages, a textured cover and space for your next idea.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "A5 / Ink",
+      "A5 / Clay"
+    ],
+    "translations": {
+      "en": {
+        "name": "Focus notebook",
+        "description": "Lay-flat pages, a textured cover and space for your next idea."
+      },
+      "ru": {
+        "name": "Блокнот для идей",
+        "description": "Раскрывается на 180°. Фактурная обложка и место для новых идей."
+      },
+      "uk": {
+        "name": "Блокнот для ідей",
+        "description": "Розкривається на 180°. Фактурна обкладинка та місце для нових ідей."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-012",
+    "specifications": {
+      "features": "Lay-flat pages, a textured cover and space for your next idea."
+    }
+  },
+  {
+    "name": "Kitchen essentials",
+    "category": "Home",
+    "price_cents": 3900,
+    "image": "/static/products/photos/colorways/13-natural.webp",
+    "description": "Natural oak utensils and a matching cutting board for everyday cooking.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Natural"
+    ],
+    "translations": {
+      "en": {
+        "name": "Kitchen essentials",
+        "description": "Natural oak utensils and a matching cutting board for everyday cooking."
+      },
+      "ru": {
+        "name": "Кухонный набор",
+        "description": "Набор принадлежностей из дуба и разделочная доска для ежедневной готовки."
+      },
+      "uk": {
+        "name": "Кухонний набір",
+        "description": "Набір приладдя з дуба та дошка для щоденного готування."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-013",
+    "specifications": {
+      "features": "Natural oak utensils and a matching cutting board for everyday cooking."
+    }
+  },
+  {
+    "name": "Sculptural vase",
+    "category": "Home",
+    "price_cents": 3400,
+    "image": "/static/products/photos/colorways/14-chalk.webp",
+    "description": "A sculptural ceramic vase with a fine ribbed texture and milk-white glaze.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Chalk"
+    ],
+    "translations": {
+      "en": {
+        "name": "Sculptural vase",
+        "description": "A sculptural ceramic vase with a fine ribbed texture and milk-white glaze."
+      },
+      "ru": {
+        "name": "Керамическая ваза",
+        "description": "Керамическая ваза с тонким рельефом и молочной глазурью."
+      },
+      "uk": {
+        "name": "Керамічна ваза",
+        "description": "Керамічна ваза з тонким рельєфом і молочною поливою."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-014",
+    "specifications": {
+      "features": "A sculptural ceramic vase with a fine ribbed texture and milk-white glaze."
+    }
+  },
+  {
+    "name": "Thermal bottle",
+    "category": "Lifestyle",
+    "price_cents": 2900,
+    "image": "/static/products/photos/colorways/15-steel.webp",
+    "description": "A reusable insulated steel bottle for your daily rhythm.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Steel",
+      "Blue"
+    ],
+    "translations": {
+      "en": {
+        "name": "Thermal bottle",
+        "description": "A reusable insulated steel bottle for your daily rhythm."
+      },
+      "ru": {
+        "name": "Термобутылка",
+        "description": "Многоразовая термобутылка из стали для вашего ежедневного ритма."
+      },
+      "uk": {
+        "name": "Термопляшка",
+        "description": "Багаторазова термопляшка зі сталі для вашого щоденного ритму."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-015",
+    "specifications": {
+      "features": "A reusable insulated steel bottle for your daily rhythm."
+    }
+  },
+  {
+    "name": "Desk organizer",
+    "category": "Home",
+    "price_cents": 3200,
+    "image": "/static/products/photos/colorways/16-natural.webp",
+    "description": "A solid wood tray with three compartments for a calmer desk.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Natural",
+      "Walnut"
+    ],
+    "translations": {
+      "en": {
+        "name": "Desk organizer",
+        "description": "A solid wood tray with three compartments for a calmer desk."
+      },
+      "ru": {
+        "name": "Органайзер для стола",
+        "description": "Деревянный органайзер с тремя отделениями для порядка на столе."
+      },
+      "uk": {
+        "name": "Органайзер для столу",
+        "description": "Дерев’яний органайзер із трьома відділеннями для порядку на столі."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-016",
+    "specifications": {
+      "features": "A solid wood tray with three compartments for a calmer desk."
+    }
+  },
+  {
+    "name": "Knitted throw",
+    "category": "Home",
+    "price_cents": 5400,
+    "image": "/static/products/photos/colorways/17-sand.webp",
+    "description": "A soft cotton knit throw with textured stitches and a tassel edge.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Sand",
+      "Clay"
+    ],
+    "translations": {
+      "en": {
+        "name": "Knitted throw",
+        "description": "A soft cotton knit throw with textured stitches and a tassel edge."
+      },
+      "ru": {
+        "name": "Вязаный плед",
+        "description": "Мягкий хлопковый плед с фактурной вязкой и кисточками."
+      },
+      "uk": {
+        "name": "В’язаний плед",
+        "description": "М’який бавовняний плед із фактурною в’язкою та китицями."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-017",
+    "specifications": {
+      "features": "A soft cotton knit throw with textured stitches and a tassel edge."
+    }
+  },
+  {
+    "name": "Table clock",
+    "category": "Home",
+    "price_cents": 4500,
+    "image": "/static/products/photos/colorways/18-cream.webp",
+    "description": "A compact analog clock with a clear dial and a sculptural metal stand.",
+    "available": true,
+    "stock": 30,
+    "variants": [
+      "Cream",
+      "Blue"
+    ],
+    "translations": {
+      "en": {
+        "name": "Table clock",
+        "description": "A compact analog clock with a clear dial and a sculptural metal stand."
+      },
+      "ru": {
+        "name": "Настольные часы",
+        "description": "Компактные аналоговые часы с чётким циферблатом и металлической подставкой."
+      },
+      "uk": {
+        "name": "Настільний годинник",
+        "description": "Компактний аналоговий годинник із чітким циферблатом і металевою підставкою."
+      }
+    },
+    "badge": "New",
+    "sku": "SF-018",
+    "specifications": {
+      "features": "A compact analog clock with a clear dial and a sculptural metal stand."
+    }
+  }
+]
